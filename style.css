@@ -2,10 +2,9 @@ body{
     height: 100vh;
     margin: 0;
     display: grid;
-    grid-template-columns: 1fr 4fr;
-    grid-template-rows: auto 1fr;
+    grid-template-columns: 300px 4fr;
+    grid-template-rows: auto auto 1fr ;
 }
-
 
 .top-hero {
     background-color:lightblue;
@@ -26,9 +25,9 @@ body{
     background-color:aquamarine ;
     grid-area: 3/2/4/3;
     display: grid;
-    grid-template-columns: 3fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    padding: 2rem;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: min-content 1fr;
+    padding: 1rem;
     gap: 2rem;
     overflow: auto;
 }
@@ -38,9 +37,11 @@ body{
 }
 .projectscontainer {
     display: grid;
-    grid-template-rows: repeat(2,1fr);
+    grid-template-rows: 1fr auto;
     grid-template-columns: repeat(auto-fit,minmax(20vw, 1fr));
-    gap: 10px
+    gap: 2rem;
+    overflow: auto;
+    padding:2rem;
 }
 
 .projectbox{
@@ -91,8 +92,9 @@ h2{
 }
 
 .profile-picture>img{
+    width: 75px;
+    height: 75px;
     border-radius: 50%;
-    width: 5vw
 }
 .account{
     display: flex;
@@ -113,8 +115,9 @@ h2{
 .actions{
     display: flex;
     align-items: center;
-    justify-content:center;
+    justify-content:flex-end;
     gap: 2rem;
+    padding:1rem;
 }
 .btn {
     background-color:gray;
@@ -142,10 +145,11 @@ h2{
 #search {
     display:inline-block;
     border: 0;
+    width: min(80%,600px);
     padding: 0.75em 2em;
     outline-color:gray;
     margin-left: 1.25rem;
-    border-radius: 90em
+    border-radius: 90em;
 }
 .announcements{
     grid-area: 1/2/2/3;
